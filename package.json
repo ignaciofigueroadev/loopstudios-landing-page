@@ -1,0 +1,22 @@
+{
+  "name": "loopstudios-landing-page-main",
+  "version": "1.0.0",
+  "description": "This is my solution of this challenge of Frontend Mentor",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch sass:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ignaciofigueroadev/loopstudios-landing-page.git"
+  },
+  "author": "Ignacio Figueroa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ignaciofigueroadev/loopstudios-landing-page/issues"
+  },
+  "homepage": "https://github.com/ignaciofigueroadev/loopstudios-landing-page#readme",
+  "dependencies": {
+    "sass": "^1.60.0"
+  }
+}

@@ -1,0 +1,89 @@
+@import "variables";
+@import "mixins/flex";
+
+.header {
+  //   background-image: url("../images/desktop/image-hero.jpg");
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  //   background-position: center;
+  //   min-height: 100vh;
+  position: relative;
+  z-index: 10;
+  @include flex(flex, row, space-between, flex-start, 0);
+  padding: 3.875rem 5.5rem;
+
+  &__logo {
+    width: 12.5rem;
+  }
+
+  &__menu {
+    width: 2.5rem;
+    display: none;
+  }
+
+  &__list {
+    @include flex(flex, row, center, center, 2.5rem);
+    color: $white;
+    font-family: $alata-font;
+    font-weight: $font-weight-400;
+  }
+
+  &__item {
+    border-bottom: 0.1875rem solid transparent;
+    transition: all 0.2s ease;
+
+    &:hover {
+      border-bottom: 0.1875rem solid $white;
+    }
+  }
+}
+
+@media (width <= 850px) {
+  .header {
+    padding: 3rem;
+
+    &__logo {
+      position: relative;
+      z-index: 5;
+    }
+
+    &__menu {
+      display: block;
+      position: relative;
+      z-index: 5;
+      cursor: pointer;
+
+      &--close {
+        display: none;
+      }
+    }
+
+    &__nav {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      background-color: $black;
+
+      transform: translateX(100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+
+      &--active {
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &__list {
+      min-height: 100vh;
+      @include flex(flex, column, flex-start, flex-start, 4.25rem);
+      padding: 15.125rem 0 0 3.125rem;
+      font-size: 2.125rem;
+      text-transform: uppercase;
+      font-family: $josefin-sans;
+    }
+  }
+}
