@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+.about {
+  width: 90%;
+  margin: 5.125rem auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.75rem;
+}
+.about__illustration--desktop {
+  display: none;
+}
+.about__card {
+  text-align: center;
+  width: 70%;
+  margin: auto;
+  background-color: hsl(0, 0%, 100%);
+}
+.about__title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 34px;
+  text-transform: uppercase;
+  line-height: 40px;
+  margin-bottom: 30px;
+}
+.about__description {
+  font-family: "Alata", sans-serif;
+  color: hsl(0, 0%, 55%);
+}
+
+/*# sourceMappingURL=about.css.map */

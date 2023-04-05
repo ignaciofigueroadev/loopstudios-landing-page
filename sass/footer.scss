@@ -1,0 +1,39 @@
+@import "variables";
+@import "mixins/flex";
+
+.footer {
+  background-color: $black;
+  padding: 3.125rem;
+  @include flex(flex, column, center, center, 3.125rem);
+  text-align: center;
+  color: $white;
+  margin-top: 50px;
+
+  &__logo {
+    width: 200px;
+  }
+
+  &__icon {
+    width: 1.25rem;
+    transition: all 0.1s ease;
+
+    &:hover {
+      filter: invert(39%) sepia(64%) saturate(2479%) hue-rotate(262deg)
+        brightness(94%) contrast(99%);
+
+      transform: scale(1.4);
+    }
+  }
+
+  &__list {
+    @include flex(flex, column, center, center, 30px);
+  }
+
+  &__socialmedias {
+    @include flex(flex, row, center, center, 1.875rem);
+  }
+
+  &__rights {
+    color: $very-dark-gray;
+  }
+}

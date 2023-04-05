@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap");
+.footer {
+  background-color: hsl(0, 0%, 0%);
+  padding: 3.125rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.125rem;
+  text-align: center;
+  color: hsl(0, 0%, 100%);
+  margin-top: 50px;
+}
+.footer__logo {
+  width: 200px;
+}
+.footer__icon {
+  width: 1.25rem;
+  transition: all 0.1s ease;
+}
+.footer__icon:hover {
+  filter: invert(39%) sepia(64%) saturate(2479%) hue-rotate(262deg) brightness(94%) contrast(99%);
+  transform: scale(1.4);
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.footer__socialmedias {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1.875rem;
+}
+.footer__rights {
+  color: hsl(0, 0%, 41%);
+}
+
+/*# sourceMappingURL=footer.css.map */
