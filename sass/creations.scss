@@ -3,8 +3,8 @@
 
 .creations {
   &__title {
-    font-size: 2.125rem;
     text-align: center;
+    font-size: 2.125rem;
     margin-bottom: 2.5rem;
     font-family: $josefin-sans;
     text-transform: uppercase;
@@ -57,30 +57,106 @@
   &__denomination {
     height: 100%;
     width: 45%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
+    @include flex(flex, row, center, flex-end, 0);
     color: $white;
-    padding: 0 0 20px 20px;
+    padding: 0 0 1.25rem 1.25rem;
     font-family: $josefin-sans;
-    font-size: 25px;
+    font-size: 1.5625rem;
     text-transform: uppercase;
-    line-height: 45px;
+    line-height: 2.8125rem;
   }
 
   &__btn {
     margin: auto;
-    margin-top: 50px;
-    border: 1px solid $black;
-    padding: 20px 40px;
+    margin-top: 3.125rem;
+    border: 0.0625rem solid $black;
+    padding: 1.25rem 2.5rem;
     font-family: $alata-font;
     text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 0.3125rem;
     transition: all 0.2s ease;
+    &--desktop {
+      display: none;
+    }
 
     &:hover {
       background-color: $black;
       color: $white;
+    }
+  }
+}
+
+@media (width >= 1024px) {
+  .creations {
+    &__container {
+      width: 90%;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.25rem;
+    }
+
+    &__principal {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 4.0625rem 2.5rem 4.0625rem;
+    }
+
+    &__title {
+      margin: 0;
+    }
+
+    &__btn--desktop {
+      display: block;
+      border: 0.0625rem solid $black;
+      padding: 0.3125rem 0.625rem 0.3125rem 0.625rem;
+      margin: 0;
+    }
+
+    &__illustration {
+      background-repeat: no-repeat;
+      background-size: cover;
+      min-height: 80vh;
+      cursor: pointer;
+      transition: transform 0.1s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+
+    &__illustration--deep-earth {
+      background-image: url("../images/desktop/image-deep-earth.jpg");
+    }
+    &__illustration--night-arcade {
+      background-image: url("../images/desktop/image-night-arcade.jpg");
+    }
+    &__illustration--soccer-team {
+      background-image: url("../images/desktop/image-soccer-team.jpg");
+    }
+    &__illustration--the-grid {
+      background-image: url("../images/desktop/image-grid.jpg");
+    }
+    &__illustration--from-up-above {
+      background-image: url("../images/desktop/image-from-above.jpg");
+    }
+    &__illustration--pocket-borealis {
+      background-image: url("../images/desktop/image-pocket-borealis.jpg");
+    }
+    &__illustration--the-curiosity {
+      background-image: url("../images/desktop/image-curiosity.jpg");
+    }
+    &__illustration--fisheye {
+      background-image: url("../images/desktop/image-fisheye.jpg");
+    }
+    &__denomination {
+      justify-content: center;
+      width: 90%;
+    }
+
+    &__btn--mobile {
+      display: none;
     }
   }
 }

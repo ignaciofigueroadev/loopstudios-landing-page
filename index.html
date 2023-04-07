@@ -46,10 +46,11 @@
 
     <section class="about" id="about">
 
-
       <div class="about__image">
-        <img src="images/desktop/image-interactive.jpg" alt="Interactive" class="about__illustration--mobile" />
-        <img src="images/mobile/image-interactive.jpg" alt="Interactive" class="about__illustration--desktop" />
+        <img src="images/desktop/image-interactive.jpg" alt="Interactive"
+          class="about__illustration--mobile about__illustration" />
+        <img src="images/mobile/image-interactive.jpg" alt="Interactive"
+          class="about__illustration--desktop about__illustration" />
       </div>
 
       <div class="about__card">
@@ -62,7 +63,10 @@
     </section>
 
     <section class=creations">
-      <h2 class="creations__title">Our creations</h2>
+      <div class="creations__principal">
+        <h2 class="creations__title">Our creations</h2>
+        <button class="creations__btn creations__btn--desktop">See more</button>
+      </div>
 
       <div class="creations__container">
         <div class="creations__illustration creations__illustration--deep-earth">
@@ -90,33 +94,36 @@
           <h2 class="creations__denomination">Make it fisheye</h2>
         </div>
       </div>
-      <button class="creations__btn">See all</button>
+      <button class="creations__btn creations__btn--mobile">See all</button>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="footer__logo">
-      <img src="images/logo.svg" alt="" />
+
+    <div class="footer__container">
+      <img src="images/logo.svg" alt="Logo" class="footer__logo" />
+
+
+      <ul class="footer__list">
+        <li><a href="#" class="footer__item">About</a></li>
+        <li><a href="#" class="footer__item">Careers</a></li>
+        <li><a href="#" class="footer__item">Events</a></li>
+        <li><a href="#" class="footer__item">Products</a></li>
+        <li><a href="#" class="footer__item">Support</a></li>
+      </ul>
     </div>
 
-    <ul class="footer__list">
-      <li><a href="#">About</a></li>
-      <li><a href="#">Careers</a></li>
-      <li><a href="#">Events</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">Support</a></li>
-    </ul>
+    <div class="footer__container">
+      <section class="footer__socialmedias">
+        <a href="#"><img src="images/icon-facebook.svg" alt="Facebook" class="footer__icon" /></a>
+        <a href="#"><img src="images/icon-twitter.svg" alt="Twitter" class="footer__icon" /></a>
+        <a href="#"><img src="images/icon-pinterest.svg" alt="Pinterest" class="footer__icon" /></a>
+        <a href="#"><img src="images/icon-instagram.svg" alt="Instagram" class="footer__icon" /></a>
+      </section>
 
-
-    <section class="footer__socialmedias">
-      <a href="#"><img src="images/icon-facebook.svg" alt="Facebook" class="footer__icon"></a>
-      <a href="#"><img src="images/icon-twitter.svg" alt="Twitter" class="footer__icon"></a>
-      <a href="#"><img src="images/icon-pinterest.svg" alt="Pinterest" class="footer__icon"></a>
-      <a href="#"><img src="images/icon-instagram.svg" alt="Instagram" class="footer__icon"></a>
-    </section>
-
-    <div class="footer__rights">
-      <p>© 2021 Loopstudios. All rights reserved.</p>
+      <div class="footer__rights">
+        <p>© 2021 Loopstudios. All rights reserved.</p>
+      </div>
     </div>
   </footer>
 

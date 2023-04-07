@@ -11,8 +11,15 @@
   color: hsl(0, 0%, 100%);
   margin-top: 50px;
 }
+.footer__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3.125rem;
+}
 .footer__logo {
-  width: 200px;
+  width: 18.75rem;
 }
 .footer__icon {
   width: 1.25rem;
@@ -27,7 +34,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 1.875rem;
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+}
+.footer__item:hover {
+  color: #d147ee;
 }
 .footer__socialmedias {
   display: flex;
@@ -38,6 +50,26 @@
 }
 .footer__rights {
   color: hsl(0, 0%, 41%);
+}
+
+@media (width >= 1024px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0;
+  }
+  .footer__container {
+    display: flex;
+    justify-content: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .footer__list {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /*# sourceMappingURL=footer.css.map */

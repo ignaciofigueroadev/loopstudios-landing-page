@@ -7,27 +7,51 @@
   grid-template-columns: 1fr;
   gap: 3.75rem;
 
+  &__illustration {
+    border-radius: 8px;
+  }
+
   &__illustration--desktop {
     display: none;
   }
 
   &__card {
     text-align: center;
-    width: 70%;
+    width: 100%;
     margin: auto;
-    background-color: $white;
+    border: 1px solid $black;
+    padding: 4.5rem 2.5rem;
+    border-radius: 8px;
   }
 
   &__title {
     font-family: $josefin-sans;
-    font-size: 34px;
+    font-size: 2.125rem;
     text-transform: uppercase;
-    line-height: 40px;
-    margin-bottom: 30px;
+    line-height: 2.5rem;
+    margin-bottom: 1.875rem;
   }
 
   &__description {
     font-family: $alata-font;
     color: $dark-gray;
+  }
+}
+
+@media (width >= 1024px) {
+  .about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &__illustration--desktop {
+      display: block;
+    }
+    &__illustration--mobile {
+      display: none;
+    }
+
+    &__card {
+      padding: 5.5rem;
+    }
   }
 }

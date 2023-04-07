@@ -9,8 +9,12 @@
   color: $white;
   margin-top: 50px;
 
+  &__container {
+    @include flex(flex, column, center, center, 3.125rem);
+  }
+
   &__logo {
-    width: 200px;
+    width: 18.75rem;
   }
 
   &__icon {
@@ -26,7 +30,15 @@
   }
 
   &__list {
-    @include flex(flex, column, center, center, 30px);
+    @include flex(flex, column, center, center, 1.875rem);
+    font-family: $josefin-sans;
+    text-transform: uppercase;
+  }
+
+  &__item {
+    &:hover {
+      color: $violet;
+    }
   }
 
   &__socialmedias {
@@ -35,5 +47,23 @@
 
   &__rights {
     color: $very-dark-gray;
+  }
+}
+
+@media (width >= 1024px) {
+  .footer {
+    @include flex(flex, row, space-between, center, 0);
+
+    &__container {
+      display: flex;
+      justify-content: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: row;
+    }
   }
 }
